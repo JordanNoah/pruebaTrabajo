@@ -2,10 +2,10 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3002;
 const db = require("./models");
-const apiRoute = require('./routes/api')
-var bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+const apiRoute = require('./routes/api');
+var bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 app.use('/api', apiRoute)
 
